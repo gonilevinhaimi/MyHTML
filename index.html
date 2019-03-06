@@ -1,351 +1,8 @@
-git
+
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-
-@import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
-
-
-body, html{
-	height: 100%;
-	padding: 0;
-	margin: 0;
-	font-family: 'Sniglet', cursive;
-}
-h1{
-	font-weight: normal;
-	font-size: 4em;
-	font-family: 'Raleway', sans-serif;
-	margin: 0 auto;
-	margin-top: 30px;
-	width: 500px;
-	color: #F90;
-	text-align: center;
-
-}
-
-
-table {
-  border-collapse: collapse;
-}
-td {
-  border: 1px solid rgb(9, 225, 233);
-  text-align: center;
-}
-td.border-less {
-  border: none;
-}
-td.width{
-  width:375;
-}
-
-
-/* Animation webkit */
-@-webkit-keyframes myfirst
-{
-	0% {margin-left: -235px}
-	90% {margin-left: 100%;}
-	100% {margin-left: 100%;}
-}
-
-/* Animation */
-@keyframes myfirst
-{
-	0% {margin-left: -235px}
-	70% {margin-left: 100%;}
-	100% {margin-left: 100%;}
-}
-
-.fish{
-	background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
-	width: 235px;
-	height: 104px;
-	margin-left: -235px;
-	position: absolute;	
-	animation: myfirst 24s;
-	-webkit-animation: myfirst 24s;
-	animation-iteration-count: infinite;
-	-webkit-animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	-webkit-animation-timing-function: linear;
-}
-
-#fish{
-	top: 120px;
-}
-
-#fish2{
-	top: 260px;
-	animation-delay: 12s;
-	-webkit-animation-delay: 12s;
-}
-
-
-header{
-	height: 160px;
-	background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
-}
-
-#form{
-	height: 100%;	
-	background-color: #98d4f3;
-	overflow: hidden;
-	position: relative;
-	
-}
-form{
-	margin: 0 auto;
-	width: 500px;
-	padding-top: 40px;
-	color: white;
-	position: relative;
-	
-	
-}
-label, input, textarea{
-	display: block;	
-}
-input, textarea{
-	width: 500px;	
-	border: none;
-	border-radius: 20px;
-	outline: none;
-	padding: 10px;
-	font-family: 'Sniglet', cursive;
-	font-size: 1em;
-	color: #676767;
-	transition: border 0.5s;
-	-webkit-transition: border 0.5s;
-	-moz-transition: border 0.5s;
-	-o-transition: border 0.5s;
-	border: solid 3px #98d4f3;	
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-	
-}
-input:focus, textarea:focus{
-	border: solid 3px #77bde0;	
-}
-
-textarea{
-	height: 100px;	
-	resize: none; 
-	overflow: auto;
-}
-input[type="submit"]{
-	background-color: #F90;
-	color: white;
-	height: 50px;
-	cursor: pointer;
-	margin-top: 30px;
-	font-size: 1.29em;
-	font-family: 'Sniglet', cursive;
-	-webkit-transition: background-color 0.5s;
-	-moz-transition: background-color 0.5s;
-	-o-transition: background-color 0.5s;
-	transition: background-color 0.5s;
-}
-input[type="submit"]:hover{
-	background-color: #e58f0e;
-	
-}
-label{
-	font-size: 1.5em;
-	margin-top: 20px;
-	padding-left: 20px;
-}
-.formgroup, .formgroup-active, .formgroup-error{
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	background-size: 10.5%;
-	transition: background-image 0.7s;
-	-webkit-transition: background-image 0.7s;
-	-moz-transition: background-image 0.7s;
-	-o-transition: background-image 0.7s;
-	width: 566px;
-	padding-top: 2px;
-}
-
-.formgroup{
-	background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif');	
-}
-.formgroup-active{
-	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
-}
-.formgroup-error{
-	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
-	color: red;
-}
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: rgb(14, 157, 240);
-        position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
-        width: 100%; /* Full width */
-        z-index: 1000;
-        
-      }
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;
-}
-
-li {
-  border-right: 1px solid #bbb;
-}
-
-li:last-child {
-  border-right: none;
-}
-
-.subtitle {
-  margin: 0 0 2em 0;
-}
-.fancy {
-  line-height: 0.5;
-  text-align: center;
-}
-.fancy span {
-  display: inline-block;
-  position: relative;  
-}
-.fancy span:before,
-.fancy span:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  border-bottom: 1px solid rgb(14, 125, 230);
-  border-top: 1px solid rgb(14, 125, 230);
-  top: 0;
-  width: 700px;
-}
-.fancy span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-.fancy span:after {
-  left: 100%;
-  margin-left: 15px;
-}
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-
-
-</style>
+      <link rel="stylesheet" type="text/css" href="filename.css">
 </head>
     <body>
         
@@ -408,7 +65,7 @@ li:last-child {
         <section id="QR Code" class="section"> <p class="subtitle fancy"><span>  QR Code</span> </p><p align="center"> <img src="frame.png" width="300" height="300"> </p> </section>
         <section id="Q&A" class="section"> <p class="subtitle fancy"><span> Q&A</span> </p> 
           <p align="center">
-          <table align="center">
+          <table align="center" width="66%">
               <tr>
                 <td class="border-less"></td>
                 <td>web 1.0</td>
@@ -449,10 +106,13 @@ li:last-child {
                     Search.</td>
               </tr>
               <tr>
-                <td>11</td>
-                <td>22</td>
-                <td>33</td>
-                <td>33</td>
+                <td class="width">display and graphics</td>
+                <td class="width">Pushed web, text/graphics based flash</td>
+                <td class="width">Two ways web pages, wikis,
+                    videos, pod casts, shading,
+                    Personal publishing, 2D poratals
+                    </td>
+                <td> </td>
               </tr>
               <tr>
                   <td>11</td>
@@ -465,16 +125,14 @@ li:last-child {
          
         </section>
         <section id="Contact Me" class="section"> <p class="subtitle fancy"><span>  Contact Me</span> </p> <br>
-            <header>
-                    <h1>Contact us</h1>
-                </header>
+        
                 
                 <div id="form">
                 
                 <div class="fish" id="fish"></div>
                 <div class="fish" id="fish2"></div>
                 
-                <form id="waterform" method="post" action="mailto:gonilevinhaimi@gmail.com"
+                <form id="waterform" method="post" action="mailto:gonilevinhaimi@gmail.com">
                 
                 <div class="formgroup" id="name-form">
                     <label for="name">Your name*</label>
